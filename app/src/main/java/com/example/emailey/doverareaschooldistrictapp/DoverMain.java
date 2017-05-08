@@ -91,7 +91,8 @@ public class DoverMain extends AppCompatActivity
             Intent i = new Intent(DoverMain.this, DistrictPageActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent i = new Intent(DoverMain.this, DistrictPageFragment.class);
+            startActivity(i);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
