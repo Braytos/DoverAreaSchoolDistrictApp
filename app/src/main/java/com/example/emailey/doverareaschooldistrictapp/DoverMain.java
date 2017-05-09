@@ -1,5 +1,6 @@
 package com.example.emailey.doverareaschooldistrictapp;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -91,8 +92,9 @@ public class DoverMain extends AppCompatActivity
             Intent i = new Intent(DoverMain.this, DistrictPageActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_slideshow) {
-            Intent i = new Intent(DoverMain.this, DistrictPageFragment.class);
-            startActivity(i);
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.add(R.id.content_dover_main, new DistrictPageFragment());
+            transaction.commit();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
